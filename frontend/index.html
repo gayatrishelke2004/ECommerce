@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FoodExpress - Online Food Ordering</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f8f9fa;
+}
+
+/* NAVBAR */
+
+nav{
+    background:white;
+    padding:18px 50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#ff6b35;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+nav ul li a:hover{
+    color:#ff6b35;
+}
+
+/* HERO */
+
+.hero{
+
+    height:500px;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.4),
+    rgba(0,0,0,.4)),
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:20px;
+}
+
+.search-box{
+    margin-top:25px;
+}
+
+.search-box input{
+
+    width:450px;
+    max-width:90%;
+
+    padding:15px;
+
+    border:none;
+    border-radius:10px;
+
+    font-size:16px;
+}
+
+/* SECTION */
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:50px 0;
+}
+
+.section-title{
+    margin-bottom:30px;
+    font-size:30px;
+    color:#333;
+}
+
+/* CATEGORIES */
+
+.categories{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+}
+
+.category-card{
+
+    background:white;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.category-card:hover{
+    transform:translateY(-5px);
+}
+
+.category-card h3{
+    margin-top:10px;
+}
+
+/* RESTAURANTS */
+
+.restaurant-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+}
+
+.card{
+
+    background:white;
+
+    overflow:hidden;
+
+    border-radius:15px;
+
+    box-shadow:0 3px 15px rgba(0,0,0,.1);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:15px;
+}
+
+.rating{
+    color:green;
+    font-weight:bold;
+}
+
+.price{
+    color:#ff6b35;
+    font-weight:bold;
+}
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    background:#ff6b35;
+
+    color:white;
+
+    border-radius:8px;
+
+    margin-top:10px;
+
+    cursor:pointer;
+}
+
+button:hover{
+    background:#eb5b28;
+}
+
+/* OFFER */
+
+.offer{
+
+    background:
+    linear-gradient(135deg,#ff6b35,#ff9248);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    color:white;
+
+    text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+
+    background:#222;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">🍔 FoodExpress</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="profile.html">Profile</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="orders.html">Orders</a></li>
+<li><a href="delivery.html">Delivery</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div>
+
+<h1>Order Your Favorite Food</h1>
+
+<p>Fast Delivery • Top Restaurants • Best Offers</p>
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Search restaurants, food, dishes..."
+>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CATEGORIES -->
+
+<div class="container">
+
+<h2 class="section-title">Food Categories</h2>
+
+<div class="categories">
+
+<div class="category-card">
+<h1>🍕</h1>
+<h3>Pizza</h3>
+</div>
+
+<div class="category-card">
+<h1>🍔</h1>
+<h3>Burgers</h3>
+</div>
+
+<div class="category-card">
+<h1>🍜</h1>
+<h3>Noodles</h3>
+</div>
+
+<div class="category-card">
+<h1>🍰</h1>
+<h3>Desserts</h3>
+</div>
+
+<div class="category-card">
+<h1>☕</h1>
+<h3>Beverages</h3>
+</div>
+
+</div>
+
+</div>
+
+<!-- RESTAURANTS -->
+
+<div class="container">
+
+<h2 class="section-title">Popular Restaurants</h2>
+
+<div class="restaurant-grid">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591">
+
+<div class="card-body">
+
+<h3>Pizza Hut</h3>
+
+<p class="rating">⭐ 4.5</p>
+
+<p>Italian • Pizza</p>
+
+<p class="price">Starting ₹199</p>
+
+<button>Add To Cart</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
+
+<div class="card-body">
+
+<h3>Domino's</h3>
+
+<p class="rating">⭐ 4.8</p>
+
+<p>Pizza • Fast Delivery</p>
+
+<p class="price">Starting ₹149</p>
+
+<button>Add To Cart</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+
+<div class="card-body">
+
+<h3>Burger King</h3>
+
+<p class="rating">⭐ 4.4</p>
+
+<p>Burgers • Snacks</p>
+
+<p class="price">Starting ₹99</p>
+
+<button>Add To Cart</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- OFFER -->
+
+<div class="container">
+
+<div class="offer">
+
+<h1>🔥 Flat 50% OFF</h1>
+
+<h2>Use Coupon Code: FOOD50</h2>
+
+<p>Valid On Orders Above ₹499</p>
+
+</div>
+
+</div>
+
+<!-- FEATURED ITEMS -->
+
+<div class="container">
+
+<h2 class="section-title">Featured Dishes</h2>
+
+<div class="restaurant-grid">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65">
+
+<div class="card-body">
+
+<h3>Margherita Pizza</h3>
+
+<p class="price">₹299</p>
+
+<button>Order Now</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+
+<div class="card-body">
+
+<h3>Chicken Burger</h3>
+
+<p class="price">₹199</p>
+
+<button>Order Now</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1563379091339-03246963d51a">
+
+<div class="card-body">
+
+<h3>Vegetable Noodles</h3>
+
+<p class="price">₹249</p>
+
+<button>Order Now</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>FoodExpress</h3>
+
+<p>Fast • Fresh • Delicious</p>
+
+<p>© 2026 Online Food Ordering System</p>
+
+</footer>
+
+</body>
+</html>

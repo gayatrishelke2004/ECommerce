@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FoodExpress - Delivery Tracking</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+}
+
+/* Navbar */
+
+nav{
+    background:white;
+    padding:18px 50px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:#ff6b35;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+}
+
+nav ul li a:hover{
+    color:#ff6b35;
+}
+
+/* Main Section */
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:40px 0;
+}
+
+h1{
+    color:#333;
+    margin-bottom:30px;
+}
+
+/* Delivery Card */
+
+.delivery-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+/* Rider Info */
+
+.rider{
+
+    display:flex;
+    align-items:center;
+
+    gap:20px;
+
+    margin-bottom:40px;
+}
+
+.rider img{
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+}
+
+.rider h2{
+    color:#333;
+}
+
+.rider p{
+    color:gray;
+}
+
+/* Timeline */
+
+.timeline{
+    position:relative;
+    margin-top:20px;
+}
+
+.timeline::before{
+
+    content:'';
+
+    position:absolute;
+
+    left:25px;
+
+    top:0;
+
+    height:100%;
+
+    width:4px;
+
+    background:#ddd;
+}
+
+.step{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:40px;
+
+    position:relative;
+}
+
+.circle{
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:#28a745;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+
+    font-size:22px;
+
+    z-index:1;
+}
+
+.pending{
+    background:#ccc;
+}
+
+.content{
+    margin-left:20px;
+}
+
+.content h3{
+    color:#333;
+}
+
+.content p{
+    color:gray;
+}
+
+/* Delivery Address */
+
+.address{
+
+    margin-top:30px;
+
+    background:#fff8f5;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    border-left:5px solid #ff6b35;
+}
+
+.address h3{
+    color:#ff6b35;
+    margin-bottom:10px;
+}
+
+/* Order Summary */
+
+.summary{
+
+    margin-top:30px;
+
+    display:flex;
+    justify-content:space-between;
+
+    background:#fff;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.05);
+}
+
+.summary div{
+    text-align:center;
+}
+
+/* Estimated Time */
+
+.time-box{
+
+    margin-top:25px;
+
+    background:#eafaf1;
+
+    color:#28a745;
+
+    font-weight:bold;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    text-align:center;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .summary{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav>
+
+<div class="logo">🍔 FoodExpress</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="profile.html">Profile</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="orders.html">Orders</a></li>
+<li><a href="delivery.html">Delivery</a></li>
+</ul>
+
+</nav>
+
+<!-- Tracking -->
+
+<div class="container">
+
+<h1>🚚 Track Your Delivery</h1>
+
+<div class="delivery-card">
+
+<!-- Rider Information -->
+
+<div class="rider">
+
+<img
+src="https://randomuser.me/api/portraits/men/32.jpg"
+alt="Delivery Partner">
+
+<div>
+
+<h2>Rahul Sharma</h2>
+
+<p>Delivery Partner</p>
+
+<p>📞 +91 9876543210</p>
+
+</div>
+
+</div>
+
+<!-- Timeline -->
+
+<div class="timeline">
+
+<div class="step">
+
+<div class="circle">✓</div>
+
+<div class="content">
+
+<h3>Order Confirmed</h3>
+
+<p>12:15 PM</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="circle">✓</div>
+
+<div class="content">
+
+<h3>Restaurant Preparing Food</h3>
+
+<p>12:20 PM</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="circle">✓</div>
+
+<div class="content">
+
+<h3>Food Picked Up</h3>
+
+<p>12:40 PM</p>
+
+</div>
+
+</div>
+
+<div class="step">
+
+<div class="circle pending">🚚</div>
+
+<div class="content">
+
+<h3>Out For Delivery</h3>
+
+<p>Arriving Soon</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ETA -->
+
+<div class="time-box">
+
+⏳ Estimated Delivery Time: 15 Minutes
+
+</div>
+
+<!-- Address -->
+
+<div class="address">
+
+<h3>Delivery Address</h3>
+
+<p>
+Flat No. 302, Pride Apartment,<br>
+Baner Road, Pune, Maharashtra.
+</p>
+
+</div>
+
+<!-- Summary -->
+
+<div class="summary">
+
+<div>
+<h2>Order #1001</h2>
+<p>Order ID</p>
+</div>
+
+<div>
+<h2>₹799</h2>
+<p>Total Amount</p>
+</div>
+
+<div>
+<h2>3 Items</h2>
+<p>Products</p>
+</div>
+
+<div>
+<h2>Paid</h2>
+<p>Payment Status</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
